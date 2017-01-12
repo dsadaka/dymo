@@ -1,0 +1,30 @@
+%h3 Welcome
+%h1 DYMO Label Framework JavaScript Library Samples: Preview and Print Label
+.header
+	#sampleDesctiption
+		%span
+			This sample shows how new DYMO Label Framework JavaScript Library can be used to display a WYSIWYG label preview as well as loading label from a local file and print it. This sample demonsrates:
+			%ul
+				%li Using dymo.label.framework.openLabelXml() and openLabelFile() to load label definition for further manipulation
+				%li label.getAddressText() and setAddressText() to read and set address information on a Address object
+				%li label.render() to generate label preview
+				%li dymo.label.framework.getPrinters() to get information about installed DYMO printers
+				%li label.print() to print the label
+			Note: the preview does not work in Internet Explorer 6 and Internet Explorer 7.
+.top
+	.left
+		#addressDiv
+			%label{:for => "addressTextArea"} Current address:
+			%br/
+			%textarea#addressTextArea{:cols => "40", :name => "addressTextArea", :rows => "5"}
+				:preserve
+
+	.content
+		#labelImageDiv
+			%img#labelImage{:alt => "label preview", :src => ""}/
+		.printControls
+			#printersDiv
+				%label{:for => "printersSelect"} Printer:
+				%select#printersSelect
+			#printDiv
+				%button#printButton Print
