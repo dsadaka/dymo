@@ -3,28 +3,45 @@
 .header
 	#sampleDesctiption
 		%span
-			This sample shows how new DYMO Label Framework JavaScript Library can be used to display a WYSIWYG label preview as well as loading label from a local file and print it. This sample demonsrates:
-			%ul
-				%li Using dymo.label.framework.openLabelXml() and openLabelFile() to load label definition for further manipulation
-				%li label.getAddressText() and setAddressText() to read and set address information on a Address object
-				%li label.render() to generate label preview
-				%li dymo.label.framework.getPrinters() to get information about installed DYMO printers
-				%li label.print() to print the label
-			Note: the preview does not work in Internet Explorer 6 and Internet Explorer 7.
+			This sample shows how new DO Label Framework JavaScript Library can be used to display a WYSIWYG label preview as well as loading label from a local file and print it. This sample demonsrates:
 .top
-	.left
-		#addressDiv
-			%label{:for => "addressTextArea"} Current address:
-			%br/
-			%textarea#addressTextArea{:cols => "40", :name => "addressTextArea", :rows => "5"}
-				:preserve
+.container
+	.row
+		.col-md-4
+			= form_for @visitor do |f|
+				- if @visitor.errors.any?
+					#error_explanation
+						%h2= "#{pluralize(@visitor.errors.count, "error")} prohibited this visitor from being saved:"
+						%ul
+							- @visitor.errors.full_messages.each do |msg|
+								%li= msg
 
-	.content
-		#labelImageDiv
-			%img#labelImage{:alt => "label preview", :src => ""}/
-		.printControls
-			#printersDiv
-				%label{:for => "printersSelect"} Printer:
-				%select#printersSelect
-			#printDiv
-				%button#printButton Print
+				.field
+					= f.label :name
+					= f.text_field :name
+				.field
+					= f.label :dob
+					= f.date_select :dob
+				.actions
+					-#= f.submit 'Save'
+
+				.printControls
+					#printersDiv
+						%label{:for => "printersSelect"} Printer:
+						%select#printersSelect
+					%p
+					#printDiv
+						%button#printButton{class: 'btn btn-primary'} Print
+					%p
+
+			#addressDiv
+				-#%label{:for => "addressTextArea"} Current address:
+				-#%br/
+				%textarea#addressTextArea{:cols => "40", :name => "addressTextArea", :rows => "1"}
+					:preserve
+
+
+		.col-md-4
+			.content
+				#labelImageDiv
+					%img#labelImage{:alt => "label preview", :src => ""}/
