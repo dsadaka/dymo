@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+	%b Specimen ID:
+	= @visitor.specimen_id
+%p
+	%b Name:
+	= @visitor.name
+%p
+	%b Dob:
+	= @visitor.dob
+
+= link_to 'Edit', edit_visitor_path(@visitor)
+\|
+= link_to 'Back', visitors_path

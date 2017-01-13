@@ -26,7 +26,6 @@
     // called when the document completly loaded
     function onload() {
         var labelFile = document.getElementById('labelFile');
-        // var addressTextArea = document.getElementById('addressTextArea');
         var inputFormArea = document.getElementById('input_form');
         var printersSelect = document.getElementById('printersSelect');
         var printButton = document.getElementById('printButton');
@@ -34,7 +33,6 @@
 
         // initialize controls
         printButton.disabled = true;
-        // addressTextArea.disabled = true;
 
         // Generates label preview and updates corresponend <img> element
         // Note: this does not work in IE 6 & 7 because they don't support data urls
@@ -70,14 +68,6 @@
             }
         }
 
-        // returns current address on the label 
-        function getAddress() {
-            if (!label || label.getAddressObjectCount() == 0)
-                return "";
-
-            return label.getAddressText(0);
-        }
-
         // Initialize label fields
         function initLabelFields() {
             var today = new Date();
@@ -107,24 +97,14 @@
             label.setObjectText('dob_yyyy', ("0000" + $('#visitor_dob_1i').val()).slice(-4));
         };
 
-        // set current address on the label 
-        function setAddress(address) {
-            if (!label || label.getAddressObjectCount() == 0)
-                return;
 
-            return label.setAddressText(0, address);
-        }
-
-
-        // updates address on the label when user types in textarea field
-        // addressTextArea.onkeyup = function () {
+        // updates form preview when user changes a form field
         inputFormArea.onkeyup = function () {
             if (!label) {
-                alert('Load label before entering address data');
+                alert('Load label before entering data');
                 return;
             }
 
-            // setAddress(addressTextArea.value);
             updateLabelFields();
             updatePreview();
         }
@@ -502,24 +482,22 @@
             return labelXml;
         }
         function loadLabelFromWeb() {
-            // use jQuery API to load label
+            // TODO use jQuery API to load label
             //$.get("Address.label", function(labelXml)
             //{
+
             label = dymo.label.framework.openLabelXml(getAddressLabelXml());
-            // check that label has an address object
+
+            // TODO check that label has correct field names
             // if (label.getAddressObjectCount() == 0) {
             //     alert("Selected label does not have an address object on it. Select another label");
             //     return;
             // }
 
-            // addressTextArea.value = getAddress();
             initLabelFields();
             initFormFields();
             updatePreview();
-            // alert('Objects:' + objs)
             printButton.disabled = false;
-            // addressTextArea.disabled = false;
-            //}, "text");
         }
 
         loadLabelFromWeb();
