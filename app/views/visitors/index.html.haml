@@ -7,7 +7,7 @@
 .top
 .container
 	.row
-		.col-md-4
+		#input_form.col-md-4
 			= form_for @visitor do |f|
 				- if @visitor.errors.any?
 					#error_explanation
@@ -17,11 +17,14 @@
 								%li= msg
 
 				.field
+					= f.label :specimen_id
+					= f.text_field :specimen_id
+				.field
 					= f.label :name
 					= f.text_field :name
 				.field
 					= f.label :dob
-					= f.date_select :dob
+					= f.date_select :dob, start_year: Date.today.year - 100
 				.actions
 					-#= f.submit 'Save'
 

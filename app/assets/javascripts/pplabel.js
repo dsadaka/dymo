@@ -20,18 +20,21 @@
 (function () {
     // stores loaded label info
     var label;
+    const LABEL_FIELDS = ['name', 'dob_dd', 'dob_mm', 'dob_yyyy']
+    const FORM_FIELD_IDS = ['visitor_name', 'dob_dd', 'dob_mm', 'dob_yyyy']
 
     // called when the document completly loaded
     function onload() {
         var labelFile = document.getElementById('labelFile');
-        var addressTextArea = document.getElementById('addressTextArea');
+        // var addressTextArea = document.getElementById('addressTextArea');
+        var inputFormArea = document.getElementById('input_form');
         var printersSelect = document.getElementById('printersSelect');
         var printButton = document.getElementById('printButton');
 
 
         // initialize controls
         printButton.disabled = true;
-        addressTextArea.disabled = true;
+        // addressTextArea.disabled = true;
 
         // Generates label preview and updates corresponend <img> element
         // Note: this does not work in IE 6 & 7 because they don't support data urls
@@ -75,6 +78,35 @@
             return label.getAddressText(0);
         }
 
+        // Initialize label fields
+        function initLabelFields() {
+            var today = new Date();
+            var today_dd = today.getDate();
+            var today_mm = today.getMonth()+1;
+            var today_yyyy = today.getFullYear();
+            label.setObjectText('today_mm', padL(today_mm.toString(),1));
+            label.setObjectText('today_dd', padL(today_dd.toString(),1));
+            label.setObjectText('today_yyyy', today_yyyy.toString());
+        }
+        // For now, init form fields to values of label fields
+        function initFormFields() {
+            $('#visitor_specimen_id').val(label.getObjectText('specimen_id'));
+            $('#visitor_name').val(label.getObjectText('name'));
+            // $('#visitor_dob_2i').val(label.getObjectText('dob_mm'));
+            // $('#visitor_dob_3i').val(label.getObjectText('dob_dd'));
+            // $('#visitor_dob_1i').val(label.getObjectText('dob_yyyy'));
+        }
+
+        // Update fields in label
+        function updateLabelFields() {
+            var objs = label.getObjectNames();
+            label.setObjectText('name', $('#visitor_name').val())
+            label.setObjectText('specimen_id', $('#visitor_specimen_id').val());
+            label.setObjectText('dob_mm', padL($('#visitor_dob_2i').val(),1));
+            label.setObjectText('dob_dd', padL($('#visitor_dob_3i').val(),1));
+            label.setObjectText('dob_yyyy', ("0000" + $('#visitor_dob_1i').val()).slice(-4));
+        };
+
         // set current address on the label 
         function setAddress(address) {
             if (!label || label.getAddressObjectCount() == 0)
@@ -85,13 +117,15 @@
 
 
         // updates address on the label when user types in textarea field
-        addressTextArea.onkeyup = function () {
+        // addressTextArea.onkeyup = function () {
+        inputFormArea.onkeyup = function () {
             if (!label) {
                 alert('Load label before entering address data');
                 return;
             }
 
-            setAddress(addressTextArea.value);
+            // setAddress(addressTextArea.value);
+            updateLabelFields();
             updatePreview();
         }
 
@@ -137,7 +171,7 @@
                 <Verticalized>False</Verticalized>\
                 <StyledText>\
                 <Element>\
-                <String>DOB: ___/___/___ Date: ___/___/___</String>\
+                <String>DOB: ___/___/____  Date: __/__/___</String>\
             <Attributes>\
             <Font Family="Arial" Size="8" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
                 <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
@@ -213,13 +247,13 @@
                 <Element>\
                 <String>06</String>\
                 <Attributes>\
-                <Font Family=".SF NS Text" Size="13" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
+                <Font Family="Helvetica" Size="13" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
                 <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
                 </Attributes>\
                 </Element>\
                 </StyledText>\
                 </TextObject>\
-                <Bounds X="675.1953" Y="1138.751" Width="311.25" Height="160"/>\
+                <Bounds X="699.0085" Y="1120.798" Width="330.9703" Height="219.6484"/>\
                 </ObjectInfo>\
                 <ObjectInfo>\
                 <TextObject>\
@@ -239,17 +273,17 @@
                 <Element>\
                 <String>09</String>\
                 <Attributes>\
-                <Font Family=".SF NS Text" Size="13" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
+                <Font Family="Helvetica" Size="13" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
                 <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
                 </Attributes>\
                 </Element>\
                 </StyledText>\
                 </TextObject>\
-                <Bounds X="995.0232" Y="1094.572" Width="276.0938" Height="160"/>\
+                <Bounds X="1008.821" Y="1021.582" Width="263.9215" Height="263.9215"/>\
                 </ObjectInfo>\
                 <ObjectInfo>\
                 <TextObject>\
-                <Name>dob_yy</Name>\
+                <Name>dob_yyyy</Name>\
                 <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
                 <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
                 <LinkedObjectName></LinkedObjectName>\
@@ -258,20 +292,20 @@
                 <IsVariable>True</IsVariable>\
                 <HorizontalAlignment>Left</HorizontalAlignment>\
                 <VerticalAlignment>Bottom</VerticalAlignment>\
-                <TextFitMode>ShrinkToFit</TextFitMode>\
+                <TextFitMode>None</TextFitMode>\
                 <UseFullFontHeight>True</UseFullFontHeight>\
                 <Verticalized>False</Verticalized>\
                 <StyledText>\
                 <Element>\
-                <String>59</String>\
+                <String>1959</String>\
                 <Attributes>\
-                <Font Family=".SF NS Text" Size="13" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
+                <Font Family="Helvetica" Size="8" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
                 <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
                 </Attributes>\
                 </Element>\
                 </StyledText>\
                 </TextObject>\
-                <Bounds X="1333.734" Y="1091.994" Width="293.4766" Height="160"/>\
+                <Bounds X="1272.805" Y="1031.504" Width="433.0073" Height="263.9215"/>\
                 </ObjectInfo>\
                 <ObjectInfo>\
                 <TextObject>\
@@ -341,6 +375,84 @@
                 </ShapeObject>\
                 <Bounds X="1056.663" Y="884.5472" Width="1767.992" Height="263.9215"/>\
                 </ObjectInfo>\
+                <ObjectInfo>\
+                <TextObject>\
+                <Name>today_mm</Name>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+                <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
+                <LinkedObjectName></LinkedObjectName>\
+                <Rotation>Rotation0</Rotation>\
+                <IsMirrored>False</IsMirrored>\
+                <IsVariable>True</IsVariable>\
+                <HorizontalAlignment>Left</HorizontalAlignment>\
+                <VerticalAlignment>Top</VerticalAlignment>\
+                <TextFitMode>ShrinkToFit</TextFitMode>\
+                <UseFullFontHeight>True</UseFullFontHeight>\
+                <Verticalized>False</Verticalized>\
+                <StyledText>\
+                <Element>\
+                <String>01</String>\
+                <Attributes>\
+                <Font Family="Helvetica" Size="13" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+                </Attributes>\
+                </Element>\
+                </StyledText>\
+                </TextObject>\
+                <Bounds X="2138.584" Y="1094.479" Width="263.9215" Height="263.9215"/>\
+                </ObjectInfo>\
+                <ObjectInfo>\
+                <TextObject>\
+                <Name>today_dd</Name>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+                <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
+                <LinkedObjectName></LinkedObjectName>\
+                <Rotation>Rotation0</Rotation>\
+                <IsMirrored>False</IsMirrored>\
+                <IsVariable>True</IsVariable>\
+                <HorizontalAlignment>Left</HorizontalAlignment>\
+                <VerticalAlignment>Top</VerticalAlignment>\
+                <TextFitMode>ShrinkToFit</TextFitMode>\
+                <UseFullFontHeight>True</UseFullFontHeight>\
+                <Verticalized>False</Verticalized>\
+                <StyledText>\
+                <Element>\
+                <String>12</String>\
+                <Attributes>\
+                <Font Family="Helvetica" Size="13" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+                </Attributes>\
+                </Element>\
+                </StyledText>\
+                </TextObject>\
+                <Bounds X="2355.941" Y="1094.479" Width="263.9215" Height="263.9215"/>\
+                </ObjectInfo>\
+                <ObjectInfo>\
+                <TextObject>\
+                <Name>today_yyyy</Name>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+                <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
+                <LinkedObjectName></LinkedObjectName>\
+                <Rotation>Rotation0</Rotation>\
+                <IsMirrored>False</IsMirrored>\
+                <IsVariable>True</IsVariable>\
+                <HorizontalAlignment>Right</HorizontalAlignment>\
+                <VerticalAlignment>Bottom</VerticalAlignment>\
+                <TextFitMode>ShrinkToFit</TextFitMode>\
+                <UseFullFontHeight>True</UseFullFontHeight>\
+                <Verticalized>False</Verticalized>\
+                <StyledText>\
+                <Element>\
+                <String>2016</String>\
+                <Attributes>\
+                <Font Family="Helvetica" Size="13" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+                </Attributes>\
+                </Element>\
+                </StyledText>\
+                </TextObject>\
+                <Bounds X="2539.037" Y="1000.001" Width="436.9633" Height="291.5796"/>\
+                </ObjectInfo>\
                 </DieCutLabel>\
                 '
             // var labelXml = '<?xml version="1.0" encoding="utf-8"?>\
@@ -401,9 +513,8 @@
             // }
 
             // addressTextArea.value = getAddress();
-            objs = label.getObjectNames();
-            label.setObjectText('name', 'Attilla the Hun')
-            label.setObjectText('specimen_id', '12345678')
+            initLabelFields();
+            initFormFields();
             updatePreview();
             // alert('Objects:' + objs)
             printButton.disabled = false;
@@ -416,6 +527,10 @@
         // load printers list on startup
         loadPrinters();
     };
+
+    function padL(str,n) {
+        return ("0".repeat(n) + str.slice(-n));
+    }
 
     function initTests()
 	{
