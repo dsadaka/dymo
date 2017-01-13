@@ -1,9 +1,11 @@
-%h3 Welcome
-%h1 DYMO Label Framework JavaScript Library Samples: Preview and Print Label
+%h3 Welcome to DYMO Label Framework JavaScript Library
 .header
 	#sampleDesctiption
 		%span
-			This sample shows how new DO Label Framework JavaScript Library can be used to display a WYSIWYG label preview as well as loading label from a local file and print it. This sample demonsrates:
+			This test shows how to use new Label Framework JavaScript Library to display a WYSIWYG label preview and print it.
+			%br
+			Change values to your liking.  Values will be saved to Visitors table when printed
+		%p
 .top
 .container
 	.row
@@ -18,7 +20,7 @@
 
 				.field
 					= f.label :specimen_id
-					= f.text_field :specimen_id
+					= f.text_field :specimen_id, autofocus: 'autofocus'
 				.field
 					= f.label :name
 					= f.text_field :name
