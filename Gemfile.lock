@@ -211,7 +211,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
-  bootstrap (~> 4.0.0.alpha5)
+  bootstrap (~> 4.0.0.alpha6)
   byebug
   capistrano (~> 3.4.0)
   capistrano-bundler
@@ -235,6 +235,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
+  sprockets-rails (>= 2.3.2)
   sqlite3
   turbolinks (~> 5)
   tzinfo-data

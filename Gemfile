@@ -21,7 +21,8 @@ group :development do
   gem 'erb2haml'
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'bootstrap', '~> 4.0.0.alpha5'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'sprockets-rails', '>= 2.3.2'
 gem 'haml-rails'
 gem 'high_voltage'
 group :development do
