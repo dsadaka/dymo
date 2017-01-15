@@ -13,9 +13,7 @@ set :ssh_options, {
     keys: ["#{ENV['HOME']}/.ec2_ws1/ws1ec2-e1.pem"]
 }
 
-# Using gemset so disable --deployment
-set :bundle_dir, ''
-set :bundle_flags, '--system --quiet'
+
 
 set :format, :pretty
 set :log_level, :debug
@@ -23,7 +21,9 @@ set :log_level, :debug
 
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
-set :rvm_ruby_string, :local
+# set :rvm_ruby_string, :local
+set :rvm_ruby_version, '2.3.0@dymo --create'      # Defaults to: 'default'
+
 
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 set :keep_releases, 5
