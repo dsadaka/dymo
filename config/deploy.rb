@@ -1,5 +1,5 @@
 set :application, 'dymo'
-set :repo_url, 'git@github.com:web-site1/dymo.git'
+set :repo_url, 'git@github.com:dsadaka/dymo.git'
 
 ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
