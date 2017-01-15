@@ -1,20 +1,33 @@
 set :application, 'dymo'
-set :repo_url, 'git@github.com:dsadaka/dymo.git'
+set :repo_url, 'git@github.com:web-site1/dymo.git'
 
 ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 set :deploy_to, '/var/www/dymo'
+set :deploy_via, :remote_cache
 set :scm, :git
 
+set :ssh_options, {
+    forward_agent: true,
+    auth_methods: ["publickey"],
+    keys: ["#{ENV['HOME']}/.ec2_ws1/ws1ec2-e1.pem"]
+}
+
+# Using gemset so disable --deployment
+set :bundle_dir, ''
+set :bundle_flags, '--system --quiet'
+
 set :format, :pretty
-# set :log_level, :debug
+set :log_level, :debug
 # set :pty, true
 
-# set :linked_files, %w{config/database.yml}
-# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_files, %w{config/database.yml}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :rvm_ruby_string, :local
 
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
-# set :keep_releases, 5
+set :keep_releases, 5
+set :passenger_restart_with_sudo, true
 
 namespace :deploy do
 
