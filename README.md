@@ -1,20 +1,9 @@
 Dymo
 ================
 
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
-
-Rails Composer is supported by developers who purchase our RailsApps tutorials.
-
-Problems? Issues?
------------
-
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
-
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
-
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
+This application demonstrates printing to a DYMO Label printer.  It uses the Javascript API to talk to their web service, which
+installs with the DYMO Label software available at http://www.dymo.com/en-US/online-support/.  Just install the software, run "Diagnose"
+from the icon menu, clone this repo and run.
 
 Ruby on Rails
 -------------
@@ -32,6 +21,8 @@ Getting Started
 Documentation and Support
 -------------------------
 
+For more information, see http://developers.dymo.com
+
 Issues
 -------------
 
@@ -44,5 +35,4 @@ Contributing
 Credits
 -------
 
-License
--------
+Dan Sadaka, Datakey, Inc. for Kipusystems, Inc.
