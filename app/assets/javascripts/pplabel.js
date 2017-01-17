@@ -74,8 +74,8 @@
             var today_dd = today.getDate();
             var today_mm = today.getMonth()+1;
             var today_yyyy = today.getFullYear();
-            label.setObjectText('today_mm', padL(today_mm.toString(),1));
-            label.setObjectText('today_dd', padL(today_dd.toString(),1));
+            label.setObjectText('today_mm', (("00" + today_mm).slice(-2)));
+            label.setObjectText('today_dd', (("00" + today_dd).slice(-2)));
             label.setObjectText('today_yyyy', today_yyyy.toString());
         }
         // For now, init form fields to values of label fields
@@ -92,8 +92,8 @@
             var objs = label.getObjectNames();
             label.setObjectText('name', $('#visitor_name').val())
             label.setObjectText('specimen_id', $('#visitor_specimen_id').val());
-            label.setObjectText('dob_mm', padL($('#visitor_dob_2i').val(),1));
-            label.setObjectText('dob_dd', padL($('#visitor_dob_3i').val(),1));
+            label.setObjectText('dob_mm', (("00" + $('#visitor_dob_2i').val()).slice(-2)));
+            label.setObjectText('dob_dd', (("00" + $('#visitor_dob_3i').val()).slice(-2)));
             label.setObjectText('dob_yyyy', ("0000" + $('#visitor_dob_1i').val()).slice(-4));
         };
 
