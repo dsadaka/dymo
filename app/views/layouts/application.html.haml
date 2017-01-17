@@ -6,7 +6,7 @@
 		%meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Dymo'}"}
 		= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
 		= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
-		= javascript_include_tag 'http://www.labelwriter.com/software/dls/sdk/js/DYMO.Label.Framework.2.0.2.js', 'data-turbolinks-track' => 'reload'
+		= javascript_include_tag 'https://www.labelwriter.com/software/dls/sdk/js/DYMO.Label.Framework.2.0.2.js', 'data-turbolinks-track' => 'reload'
 		= javascript_include_tag 'https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js', 'data-turbolinks-track' => 'reload'
 		= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
 		= csrf_meta_tags
