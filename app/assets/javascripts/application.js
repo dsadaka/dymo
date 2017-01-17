@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require tether.min
 //= require bootstrap-sprockets
+//= require DYMO.Label.Framework.2.0.2
 //= require_tree .
