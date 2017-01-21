@@ -131,19 +131,22 @@
                 <DieCutLabel Version="8.0" Units="twips">\
                 <PaperOrientation>Landscape</PaperOrientation>\
                 <Id>Small30336</Id>\
+                <IsOutlined>false</IsOutlined>\
                 <PaperName>30336 1 in x 2-1/8 in</PaperName>\
             <DrawCommands>\
-            <RoundRectangle X="0" Y="0" Width="1440" Height="3060" Rx="180" Ry="180"/>\
+            <RoundRectangle X="0" Y="0" Width="1440" Height="3060" Rx="180" Ry="180" />\
                 </DrawCommands>\
                 <ObjectInfo>\
                 <TextObject>\
                 <Name>date_text</Name>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
-                <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
-                <LinkedObjectName></LinkedObjectName>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />\
+                <BackColor Alpha="0" Red="255" Green="255" Blue="255" />\
+                <LinkedObjectName />\
                 <Rotation>Rotation0</Rotation>\
                 <IsMirrored>False</IsMirrored>\
                 <IsVariable>False</IsVariable>\
+                <GroupID>-1</GroupID>\
+                <IsOutlined>False</IsOutlined>\
                 <HorizontalAlignment>Center</HorizontalAlignment>\
                 <VerticalAlignment>Bottom</VerticalAlignment>\
                 <TextFitMode>None</TextFitMode>\
@@ -151,47 +154,51 @@
                 <Verticalized>False</Verticalized>\
                 <StyledText>\
                 <Element>\
-                <String>DOB: ___/___/____  Date: __/__/___</String>\
+                <String xml:space="preserve">DOB: ___/___/____  Date: __/__/___</String>\
             <Attributes>\
-            <Font Family="Arial" Size="8" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+            <Font Family="Arial" Size="8" Bold="False" Italic="False" Underline="False" Strikeout="False" />\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" HueScale="100" />\
                 </Attributes>\
                 </Element>\
                 </StyledText>\
                 </TextObject>\
-                <Bounds X="129.5999" Y="1141.291" Width="2846.4" Height="160"/>\
+                <Bounds X="129.5999" Y="1141.291" Width="2846.4" Height="160" />\
                 </ObjectInfo>\
                 <ObjectInfo>\
                 <BarcodeObject>\
                 <Name>specimen_id</Name>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
-                <BackColor Alpha="255" Red="255" Green="255" Blue="255"/>\
-                <LinkedObjectName></LinkedObjectName>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />\
+                <BackColor Alpha="255" Red="255" Green="255" Blue="255" />\
+                <LinkedObjectName />\
                 <Rotation>Rotation0</Rotation>\
                 <IsMirrored>False</IsMirrored>\
                 <IsVariable>True</IsVariable>\
+                <GroupID>-1</GroupID>\
+                <IsOutlined>False</IsOutlined>\
                 <Text>K3G3KEJR</Text>\
-                <Type>Code39CS</Type>\
+                <Type>Code39</Type>\
                 <Size>Small</Size>\
                 <TextPosition>Bottom</TextPosition>\
-                <TextFont Family=".SF NS Text" Size="9" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
-                <CheckSumFont Family=".SF NS Text" Size="10" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
+                <TextFont Family=".SF NS Text" Size="9" Bold="False" Italic="False" Underline="False" Strikeout="False" />\
+                <CheckSumFont Family=".SF NS Text" Size="10" Bold="False" Italic="False" Underline="False" Strikeout="False" />\
                 <TextEmbedding>None</TextEmbedding>\
                 <ECLevel>0</ECLevel>\
                 <HorizontalAlignment>Center</HorizontalAlignment>\
-                <QuietZonesPadding Left="0" Right="0" Top="0" Bottom="0"/>\
+                <QuietZonesPadding Left="0" Top="0" Right="0" Bottom="0" />\
                 </BarcodeObject>\
-                <Bounds X="209.5999" Y="105.3734" Width="2540" Height="360"/>\
+                <Bounds X="209.5999" Y="105.3734" Width="2540" Height="360" />\
                 </ObjectInfo>\
                 <ObjectInfo>\
                 <TextObject>\
                 <Name>name</Name>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
-                <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
-                <LinkedObjectName></LinkedObjectName>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />\
+                <BackColor Alpha="0" Red="255" Green="255" Blue="255" />\
+                <LinkedObjectName />\
                 <Rotation>Rotation0</Rotation>\
                 <IsMirrored>False</IsMirrored>\
                 <IsVariable>True</IsVariable>\
+                <GroupID>-1</GroupID>\
+                <IsOutlined>False</IsOutlined>\
                 <HorizontalAlignment>Left</HorizontalAlignment>\
                 <VerticalAlignment>Top</VerticalAlignment>\
                 <TextFitMode>ShrinkToFit</TextFitMode>\
@@ -199,25 +206,27 @@
                 <Verticalized>False</Verticalized>\
                 <StyledText>\
                 <Element>\
-                <String>Dan the Man</String>\
+                <String xml:space="preserve">Dan the Man</String>\
             <Attributes>\
-            <Font Family="Arial" Size="9" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+            <Font Family="Arial" Size="9" Bold="False" Italic="False" Underline="False" Strikeout="False" />\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" HueScale="100" />\
                 </Attributes>\
                 </Element>\
                 </StyledText>\
                 </TextObject>\
-                <Bounds X="1033.065" Y="535.6141" Width="1871.647" Height="263.9215"/>\
+                <Bounds X="1033.065" Y="535.6141" Width="1871.647" Height="263.9215" />\
                 </ObjectInfo>\
                 <ObjectInfo>\
                 <TextObject>\
                 <Name>dob_mm</Name>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
-                <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
-                <LinkedObjectName></LinkedObjectName>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />\
+                <BackColor Alpha="0" Red="255" Green="255" Blue="255" />\
+                <LinkedObjectName />\
                 <Rotation>Rotation0</Rotation>\
                 <IsMirrored>False</IsMirrored>\
                 <IsVariable>True</IsVariable>\
+                <GroupID>-1</GroupID>\
+                <IsOutlined>False</IsOutlined>\
                 <HorizontalAlignment>Left</HorizontalAlignment>\
                 <VerticalAlignment>Top</VerticalAlignment>\
                 <TextFitMode>ShrinkToFit</TextFitMode>\
@@ -225,77 +234,55 @@
                 <Verticalized>False</Verticalized>\
                 <StyledText>\
                 <Element>\
-                <String>06</String>\
+                <String xml:space="preserve">06</String>\
                 <Attributes>\
-                <Font Family="Helvetica" Size="13" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+                <Font Family="Arial" Size="12" Bold="False" Italic="False" Underline="False" Strikeout="False" />\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" HueScale="100" />\
                 </Attributes>\
                 </Element>\
                 </StyledText>\
                 </TextObject>\
-                <Bounds X="699.0085" Y="1120.798" Width="330.9703" Height="219.6484"/>\
-                </ObjectInfo>\
-                <ObjectInfo>\
-                <TextObject>\
-                <Name>dob_dd</Name>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
-                <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
-                <LinkedObjectName></LinkedObjectName>\
-                <Rotation>Rotation0</Rotation>\
-                <IsMirrored>False</IsMirrored>\
-                <IsVariable>True</IsVariable>\
-                <HorizontalAlignment>Left</HorizontalAlignment>\
-                <VerticalAlignment>Bottom</VerticalAlignment>\
-                <TextFitMode>ShrinkToFit</TextFitMode>\
-                <UseFullFontHeight>True</UseFullFontHeight>\
-                <Verticalized>False</Verticalized>\
-                <StyledText>\
-                <Element>\
-                <String>09</String>\
-                <Attributes>\
-                <Font Family="Helvetica" Size="13" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
-                </Attributes>\
-                </Element>\
-                </StyledText>\
-                </TextObject>\
-                <Bounds X="1008.821" Y="1021.582" Width="263.9215" Height="263.9215"/>\
+                <Bounds X="699.0085" Y="1105.798" Width="300.9703" Height="194.6484" />\
                 </ObjectInfo>\
                 <ObjectInfo>\
                 <TextObject>\
                 <Name>dob_yyyy</Name>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
-                <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
-                <LinkedObjectName></LinkedObjectName>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />\
+                <BackColor Alpha="0" Red="255" Green="255" Blue="255" />\
+                <LinkedObjectName />\
                 <Rotation>Rotation0</Rotation>\
                 <IsMirrored>False</IsMirrored>\
                 <IsVariable>True</IsVariable>\
+                <GroupID>-1</GroupID>\
+                <IsOutlined>False</IsOutlined>\
                 <HorizontalAlignment>Left</HorizontalAlignment>\
                 <VerticalAlignment>Bottom</VerticalAlignment>\
-                <TextFitMode>None</TextFitMode>\
+                <TextFitMode>ShrinkToFit</TextFitMode>\
                 <UseFullFontHeight>True</UseFullFontHeight>\
                 <Verticalized>False</Verticalized>\
                 <StyledText>\
                 <Element>\
-                <String>1959</String>\
+                <String xml:space="preserve">1959</String>\
                 <Attributes>\
-                <Font Family="Helvetica" Size="8" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+                <Font Family="Arial" Size="12" Bold="False" Italic="False" Underline="False" Strikeout="False" />\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" HueScale="100" />\
                 </Attributes>\
                 </Element>\
                 </StyledText>\
                 </TextObject>\
-                <Bounds X="1272.805" Y="1031.504" Width="433.0073" Height="263.9215"/>\
+                <Bounds X="1272.805" Y="1031.504" Width="388.0073" Height="263.9215" />\
                 </ObjectInfo>\
                 <ObjectInfo>\
                 <TextObject>\
                 <Name>lblName</Name>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
-                <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
-                <LinkedObjectName></LinkedObjectName>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />\
+                <BackColor Alpha="0" Red="255" Green="255" Blue="255" />\
+                <LinkedObjectName />\
                 <Rotation>Rotation0</Rotation>\
                 <IsMirrored>False</IsMirrored>\
                 <IsVariable>True</IsVariable>\
+                <GroupID>-1</GroupID>\
+                <IsOutlined>False</IsOutlined>\
                 <HorizontalAlignment>Left</HorizontalAlignment>\
                 <VerticalAlignment>Top</VerticalAlignment>\
                 <TextFitMode>ShrinkToFit</TextFitMode>\
@@ -303,25 +290,27 @@
                 <Verticalized>False</Verticalized>\
                 <StyledText>\
                 <Element>\
-                <String>Name:</String>\
+                <String xml:space="preserve">Name:</String>\
             <Attributes>\
-            <Font Family=".SF NS Text" Size="8" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+            <Font Family=".SF NS Text" Size="8" Bold="False" Italic="False" Underline="False" Strikeout="False" />\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" HueScale="100" />\
                 </Attributes>\
                 </Element>\
                 </StyledText>\
                 </TextObject>\
-                <Bounds X="206.6921" Y="515.3525" Width="599.3627" Height="263.9215"/>\
+                <Bounds X="206.6921" Y="515.3525" Width="599.3627" Height="263.9215" />\
                 </ObjectInfo>\
                 <ObjectInfo>\
                 <TextObject>\
                 <Name>TEXT</Name>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
-                <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
-                <LinkedObjectName></LinkedObjectName>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />\
+                <BackColor Alpha="0" Red="255" Green="255" Blue="255" />\
+                <LinkedObjectName />\
                 <Rotation>Rotation0</Rotation>\
                 <IsMirrored>False</IsMirrored>\
                 <IsVariable>False</IsVariable>\
+                <GroupID>-1</GroupID>\
+                <IsOutlined>False</IsOutlined>\
                 <HorizontalAlignment>Left</HorizontalAlignment>\
                 <VerticalAlignment>Top</VerticalAlignment>\
                 <TextFitMode>None</TextFitMode>\
@@ -329,41 +318,45 @@
                 <Verticalized>False</Verticalized>\
                 <StyledText>\
                 <Element>\
-                <String>Signature:</String>\
+                <String xml:space="preserve">Signature:</String>\
             <Attributes>\
-            <Font Family=".SF NS Text" Size="8" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+            <Font Family=".SF NS Text" Size="8" Bold="False" Italic="False" Underline="False" Strikeout="False" />\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" HueScale="100" />\
                 </Attributes>\
                 </Element>\
                 </StyledText>\
                 </TextObject>\
-                <Bounds X="187.365" Y="840.8025" Width="988.5121" Height="263.9215"/>\
+                <Bounds X="187.365" Y="840.8025" Width="988.5121" Height="263.9215" />\
                 </ObjectInfo>\
                 <ObjectInfo>\
-                <ShapeObject>\
+                <ShapeObject Stroke="SolidLine">\
                 <Name>sig_border</Name>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
-                <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
-                <LinkedObjectName></LinkedObjectName>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />\
+                <BackColor Alpha="0" Red="255" Green="255" Blue="255" />\
+                <LinkedObjectName />\
                 <Rotation>Rotation0</Rotation>\
                 <IsMirrored>False</IsMirrored>\
                 <IsVariable>False</IsVariable>\
+                <GroupID>-1</GroupID>\
+                <IsOutlined>False</IsOutlined>\
                 <ShapeType>HorizontalLine</ShapeType>\
                 <LineWidth>20</LineWidth>\
                 <LineAlignment>LeftOrTop</LineAlignment>\
-                <FillColor Alpha="0" Red="0" Green="0" Blue="0"/>\
+                <FillColor Alpha="0" Red="0" Green="0" Blue="0" />\
                 </ShapeObject>\
-                <Bounds X="1056.663" Y="884.5472" Width="1767.992" Height="263.9215"/>\
+                <Bounds X="1006.663" Y="884.5472" Width="1767.992" Height="263.9215" />\
                 </ObjectInfo>\
                 <ObjectInfo>\
                 <TextObject>\
                 <Name>today_mm</Name>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
-                <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
-                <LinkedObjectName></LinkedObjectName>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />\
+                <BackColor Alpha="0" Red="255" Green="255" Blue="255" />\
+                <LinkedObjectName />\
                 <Rotation>Rotation0</Rotation>\
                 <IsMirrored>False</IsMirrored>\
                 <IsVariable>True</IsVariable>\
+                <GroupID>-1</GroupID>\
+                <IsOutlined>False</IsOutlined>\
                 <HorizontalAlignment>Left</HorizontalAlignment>\
                 <VerticalAlignment>Top</VerticalAlignment>\
                 <TextFitMode>ShrinkToFit</TextFitMode>\
@@ -371,25 +364,27 @@
                 <Verticalized>False</Verticalized>\
                 <StyledText>\
                 <Element>\
-                <String>01</String>\
+                <String xml:space="preserve">01</String>\
                 <Attributes>\
-                <Font Family="Helvetica" Size="13" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+                <Font Family="Arial" Size="12" Bold="False" Italic="False" Underline="False" Strikeout="False" />\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" HueScale="100" />\
                 </Attributes>\
                 </Element>\
                 </StyledText>\
                 </TextObject>\
-                <Bounds X="2138.584" Y="1094.479" Width="263.9215" Height="263.9215"/>\
+                <Bounds X="2138.584" Y="1094.0785" Width="203.9215" Height="213.9215" />\
                 </ObjectInfo>\
                 <ObjectInfo>\
                 <TextObject>\
                 <Name>today_dd</Name>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
-                <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
-                <LinkedObjectName></LinkedObjectName>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />\
+                <BackColor Alpha="0" Red="255" Green="255" Blue="255" />\
+                <LinkedObjectName />\
                 <Rotation>Rotation0</Rotation>\
                 <IsMirrored>False</IsMirrored>\
                 <IsVariable>True</IsVariable>\
+                <GroupID>-1</GroupID>\
+                <IsOutlined>False</IsOutlined>\
                 <HorizontalAlignment>Left</HorizontalAlignment>\
                 <VerticalAlignment>Top</VerticalAlignment>\
                 <TextFitMode>ShrinkToFit</TextFitMode>\
@@ -397,25 +392,27 @@
                 <Verticalized>False</Verticalized>\
                 <StyledText>\
                 <Element>\
-                <String>12</String>\
+                <String xml:space="preserve">12</String>\
                 <Attributes>\
-                <Font Family="Helvetica" Size="13" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+                <Font Family="Arial" Size="12" Bold="False" Italic="False" Underline="False" Strikeout="False" />\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" HueScale="100" />\
                 </Attributes>\
                 </Element>\
                 </StyledText>\
                 </TextObject>\
-                <Bounds X="2355.941" Y="1094.479" Width="263.9215" Height="263.9215"/>\
+                <Bounds X="2370.941" Y="1094.479" Width="223.9215" Height="198.921500000001" />\
                 </ObjectInfo>\
                 <ObjectInfo>\
                 <TextObject>\
                 <Name>today_yyyy</Name>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
-                <BackColor Alpha="0" Red="255" Green="255" Blue="255"/>\
-                <LinkedObjectName></LinkedObjectName>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />\
+                <BackColor Alpha="0" Red="255" Green="255" Blue="255" />\
+                <LinkedObjectName />\
                 <Rotation>Rotation0</Rotation>\
                 <IsMirrored>False</IsMirrored>\
                 <IsVariable>True</IsVariable>\
+                <GroupID>-1</GroupID>\
+                <IsOutlined>False</IsOutlined>\
                 <HorizontalAlignment>Right</HorizontalAlignment>\
                 <VerticalAlignment>Bottom</VerticalAlignment>\
                 <TextFitMode>ShrinkToFit</TextFitMode>\
@@ -423,15 +420,43 @@
                 <Verticalized>False</Verticalized>\
                 <StyledText>\
                 <Element>\
-                <String>2016</String>\
+                <String xml:space="preserve">2016</String>\
                 <Attributes>\
-                <Font Family="Helvetica" Size="13" Bold="False" Italic="False" Underline="False" Strikeout="False"/>\
-                <ForeColor Alpha="255" Red="0" Green="0" Blue="0"/>\
+                <Font Family="Arial" Size="12" Bold="False" Italic="False" Underline="False" Strikeout="False" />\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" HueScale="100" />\
                 </Attributes>\
                 </Element>\
                 </StyledText>\
                 </TextObject>\
-                <Bounds X="2539.037" Y="1000.001" Width="436.9633" Height="291.5796"/>\
+                <Bounds X="2599.0367" Y="1055.001" Width="376.9633" Height="231.5796" />\
+                </ObjectInfo>\
+                <ObjectInfo>\
+                <TextObject>\
+                <Name>dob_dd</Name>\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />\
+                <BackColor Alpha="0" Red="255" Green="255" Blue="255" />\
+                <LinkedObjectName />\
+                <Rotation>Rotation0</Rotation>\
+                <IsMirrored>False</IsMirrored>\
+                <IsVariable>False</IsVariable>\
+                <GroupID>-1</GroupID>\
+                <IsOutlined>False</IsOutlined>\
+                <HorizontalAlignment>Left</HorizontalAlignment>\
+                <VerticalAlignment>Top</VerticalAlignment>\
+                <TextFitMode>ShrinkToFit</TextFitMode>\
+                <UseFullFontHeight>True</UseFullFontHeight>\
+                <Verticalized>False</Verticalized>\
+                <StyledText>\
+                <Element>\
+                <String xml:space="preserve">09</String>\
+                <Attributes>\
+                <Font Family="Arial" Size="12" Bold="False" Italic="False" Underline="False" Strikeout="False" />\
+                <ForeColor Alpha="255" Red="0" Green="0" Blue="0" HueScale="100" />\
+                </Attributes>\
+                </Element>\
+                </StyledText>\
+                </TextObject>\
+                <Bounds X="990" Y="1098" Width="466" Height="195" />\
                 </ObjectInfo>\
                 </DieCutLabel>\
                 '

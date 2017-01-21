@@ -1,6 +1,9 @@
 Dymo
 ================
 
+
+
+
 This application demonstrates printing to a DYMO Label printer.  It uses the Javascript API to talk to their web service, which
 installs with the DYMO Label software available at http://www.dymo.com/en-US/online-support/.  Just install the software, run "Diagnose"
 from the icon menu, clone this repo and run.
